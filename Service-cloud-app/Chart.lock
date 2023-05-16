@@ -1,0 +1,33 @@
+dependencies:
+- name: postgres
+  repository: file://../backbone-services/postgres
+  version: 0.1.0
+- name: admin-api
+  repository: file://../backbone-services/admin-api
+  version: 0.1.0
+- name: admin-celery
+  repository: file://../backbone-services/admin-celery
+  version: 0.1.0
+- name: api
+  repository: file://../backbone-services/api
+  version: 0.1.0
+- name: celery
+  repository: file://../backbone-services/celery
+  version: 0.1.0
+- name: apirevproxy
+  repository: file://../backbone-services/apirevproxy
+  version: 0.1.0
+- name: console
+  repository: file://../backbone-services/console
+  version: 0.1.0
+- name: socketio
+  repository: file://../backbone-services/socketio
+  version: 0.1.0
+- name: pgadmin
+  repository: file://../backbone-services/pgadmin
+  version: 0.1.0
+- name: smtp
+  repository: file://../backbone-services/smtp
+  version: 0.1.0
+digest: sha256:75a981c931b45b485d991fd8c713dc6729ca67a59353d861cf10bfe4cf9297e4
+generated: "2023-05-01T12:08:08.051862+05:30"
