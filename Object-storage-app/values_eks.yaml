@@ -11,7 +11,7 @@ postgres-osaas:
 
   svc_name: "postgres-osaas"
 
-  pvSize: 1Gi
+  pvSize: 10Gi
 
   #resources: |
   #  requests:
