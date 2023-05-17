@@ -109,7 +109,7 @@ nks-celery:
 
   # Container Configs
   image:
-    repository: "coredge/kubernetes-middleware"
+    repository: "coredgeio/kubernetes-middleware"
     pullPolicy: IfNotPresent
     tag: "v06032023161315"
   replicas: "1"
