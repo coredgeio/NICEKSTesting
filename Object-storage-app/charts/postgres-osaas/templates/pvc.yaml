@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: osaas-data
 spec:
-  storageClassName: {{ .Values.global.storageClass }}
+  #storageClassName: {{ .Values.global.storageClass }}
   accessModes:
     - ReadWriteOnce
   resources:
