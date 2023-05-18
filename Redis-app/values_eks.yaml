@@ -34,6 +34,6 @@ redisadmin:
 
   ingress:
     enabled: true
-    hostName: redis.preprodcloud.nic.in
+    hostName: redisadmin.coredge.io
     context: redis
-    secretName: preprod-certs
+    secretName: coredge
