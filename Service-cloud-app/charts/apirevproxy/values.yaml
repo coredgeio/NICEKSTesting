@@ -32,4 +32,6 @@ ingress:
   enabled: true
   hostName: serviceapi-prod.cloud.gov.in
   context: 
+  ingressClassName: nginx
+
 
