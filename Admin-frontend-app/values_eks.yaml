@@ -3,7 +3,7 @@ admin:
     app: "admin"
   # Container Configs
   image:
-    repository: "coredge/admin"
+    repository: "coredgeio/admin"
     pullPolicy: IfNotPresent
     tag: "v16032023162216"
   replicas: "1"
@@ -38,9 +38,9 @@ admin:
 
   ingress:
     enabled: true
-    hostName: admin-cd.labcloud.nic.in
+    hostName: admin.coredge.io
     context: 
-    secretName: labcloud-certs
+    secretName: coredge
 
 admin-new-ui:
   labels:
@@ -48,7 +48,7 @@ admin-new-ui:
 
   # Container Configs
   image:
-    repository: "chub.cloud.gov.in/service-cloud-dev/admin_react_frontend"
+    repository: "coredgeio/admin_react_frontend"
     pullPolicy: IfNotPresent
     tag: "v18042023140831"
   replicas: "1"
@@ -87,6 +87,6 @@ admin-new-ui:
 
   ingress:
     enabled: true
-    hostName: serviceadmin-cd.labcloud.nic.in
+    hostName: newadmin.coredge.io
     context: 
-    secretName: labcloud-certs
+    secretName: coredge
