@@ -41,6 +41,7 @@ admin:
     hostName: admin.coredge.io
     context: 
     secretName: coredge
+    ingressClassName: nginx
 
 admin-new-ui:
   labels:
@@ -90,3 +91,4 @@ admin-new-ui:
     hostName: newadmin.coredge.io
     context: 
     secretName: coredge
+    ingressClassName: nginx
