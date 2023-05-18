@@ -75,7 +75,7 @@ osaas-api:
     - name: DB_HOST
       value: "postgres-osaas"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.preprodcloud.nic.in"
+      value: "https://serviceconsole.coredge.io"
 
   volumes: |
     - name: osaas-swagger-ui
@@ -117,7 +117,7 @@ osaas-celery:
     - name: AUTO_VERIFY_BACKUP
       value: 'false'
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.preprodcloud.nic.in"
+      value: "https://serviceconsole.coredge.io"
     - name: DB_HOST
       value: postgres-osaas
     - name: DB_PORT
@@ -156,9 +156,4 @@ osaas-celery:
       - ip: 10.194.49.235
         hostnames:
           - ceph-ndcbbsr-dashboard.cloud.gov.in
-      - ip: 10.246.104.182
-        hostnames:
-          - api.staasdl.nic.in
-      - ip: 10.194.48.56
-        hostnames:
-          - ndcapi01.mgmtbbsshcp01.bhubcloud1.nic.in        
+     

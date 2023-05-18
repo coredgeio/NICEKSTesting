@@ -84,23 +84,21 @@ nks-api:
     - name: NKS_PASSWORD
       value: Kubeguardian1
     - name: NKS_PORTAL_BASE_URL
-      value: https://nks.preprodcloud.nic.in
+      value: https://nks.coredge.io
     - name: SERVICE_EXTERNAL_URL
-      value: https://serviceapi.preprodcloud.nic.in      
+      value: https://serviceapi.coredge.io      
 
   hostAliases:
       - ip: 10.194.168.31
         hostnames:
           - uat-devops.cloud.gov.in
-      - ip: 10.194.49.26
-        hostnames:
-          - chub.cloud.gov.in
+
       - ip: 10.194.49.25
         hostnames:
           - git.cloud.gov.in
       - ip: 10.194.98.211
         hostnames:
-          - nks.preprodcloud.nic.in    
+          - nks.coredge.io    
 
 
 nks-celery:
@@ -156,21 +154,18 @@ nks-celery:
     - name: NKS_PASSWORD
       value: Kubeguardian1
     - name: NKS_PORTAL_BASE_URL
-      value: https://nks.preprodcloud.nic.in
+      value: https://nks.coredge.io
     - name: SERVICE_EXTERNAL_URL
-      value: https://serviceapi.preprodcloud.nic.in      
+      value: https://serviceapi.coredge.io      
 
 
   hostAliases:
       - ip: 10.194.168.31
         hostnames:
           - uat-devops.cloud.gov.in
-      - ip: 10.194.49.26
-        hostnames:
-          - chub.cloud.gov.in
       - ip: 10.194.49.25
         hostnames:
           - git.cloud.gov.in
       - ip: 10.194.98.211
         hostnames:
-          - nks.preprodcloud.nic.in    
+          - nks.coredge.io    
