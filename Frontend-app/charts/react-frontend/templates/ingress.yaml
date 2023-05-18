@@ -5,6 +5,7 @@ metadata:
   labels:
     app: react-frontend
 spec:
+  ingressClassName: {{ .Values.ingress.ingressClassName }}
   tls:
     - hosts:
         - {{ .Values.ingress.hostName }}
