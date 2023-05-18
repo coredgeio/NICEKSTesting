@@ -112,8 +112,8 @@ react-frontend:
       mountPath: /etc/nginx/conf.d
 
   ingress:
+    ingressClassName: nginx
     enabled: true
     hostName: reactfrontend.coredge.io
     context: 
     secretName: coredge
-    ingressClassName: nginx
