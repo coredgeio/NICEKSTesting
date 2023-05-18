@@ -46,7 +46,7 @@ frontend:
 
   ingress:
     enabled: true
-    hostName: frontend.coredge.io
+    hostName: frontend-cd.coredge.io
     secretName: coredge
     ingressClassName: nginx
 
@@ -89,7 +89,7 @@ react-frontend:
     - name: REACT_APP_OIDC_ENABLED
       value: 'true'
     - name: REACT_APP_OLD_PORTAL_LINK
-      value:  https:\/\/service.coredge.io\/ui\/v1\/
+      value:  https:\/\/service-cd.coredge.io\/ui\/v1\/
     - name: REACT_APP_ROUTER_BASE_NAME
       value: \/
     - name: REACT_APP_ROUTE_PROXY
@@ -114,6 +114,6 @@ react-frontend:
   ingress:
     ingressClassName: nginx
     enabled: true
-    hostName: reactfrontend.coredge.io
+    hostName: reactfrontend-cd.coredge.io
     context: 
     secretName: coredge

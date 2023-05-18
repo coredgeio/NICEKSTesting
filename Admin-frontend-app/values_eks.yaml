@@ -38,7 +38,7 @@ admin:
 
   ingress:
     enabled: true
-    hostName: admin.coredge.io
+    hostName: admin-cd.coredge.io
     context: 
     secretName: coredge
     ingressClassName: nginx
@@ -88,7 +88,7 @@ admin-new-ui:
 
   ingress:
     enabled: true
-    hostName: newadmin.coredge.io
+    hostName: newadmin-cd.coredge.io
     context: 
     secretName: coredge
     ingressClassName: nginx
