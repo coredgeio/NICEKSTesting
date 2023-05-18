@@ -8,6 +8,7 @@ metadata:
   labels:
 {{- include "common.labels" . | nindent 4 }}                            
 spec:
+  ingressClassName: {{ .Values.ingress.ingressClassName }}
   tls:
     - hosts:
         - {{ .Values.ingress.hostName }}
