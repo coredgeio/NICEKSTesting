@@ -1,6 +1,6 @@
 global:
-  certname: cordege
-  #Example cordege, preprod-certs
+  certname: coredge
+  #Example coredge, preprod-certs
 
 replicas: 3
 image:
@@ -59,7 +59,7 @@ ingress:
   tls:
     - hosts:
         - 'auth-cd.coredge.io'
-      secretName: "cordege"
+      secretName: "coredge"
 
   # ingress for console only (/auth/admin)
   console:
@@ -82,6 +82,6 @@ ingress:
     tls:
      - hosts:
          - authadmin-cd.coredge.io
-       secretName: "cordege"
+       secretName: "coredge"
 
 ## Network policy configuration      
