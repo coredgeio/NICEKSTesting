@@ -58,7 +58,7 @@ react-frontend:
   image:
     repository: "coredgeio/react_frontend"
     pullPolicy: IfNotPresent
-    tag: "v10042023161358"
+    tag: "airtel_v1"
   replicas: "1"
   httpPort: 80
   #resources: |
