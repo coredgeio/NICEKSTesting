@@ -66,7 +66,7 @@ ingress:
     # If `true`, an Ingress is created for console path only
     enabled: true
     # The name of Ingress Class associated with the console ingress only
-    ingressClassName: ""
+    ingressClassName: "nginx"
     # Ingress annotations for console ingress only
     # Useful to set nginx.ingress.kubernetes.io/whitelist-source-range particularly
     annotations: {}
