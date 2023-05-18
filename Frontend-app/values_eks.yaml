@@ -48,6 +48,7 @@ frontend:
     enabled: true
     hostName: frontend.coredge.io
     secretName: coredge
+    ingressClassName: nginx
 
 react-frontend:
   labels:
@@ -115,3 +116,4 @@ react-frontend:
     hostName: reactfrontend.coredge.io
     context: 
     secretName: coredge
+    ingressClassName: nginx
