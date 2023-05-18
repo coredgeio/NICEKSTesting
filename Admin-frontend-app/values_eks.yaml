@@ -51,7 +51,7 @@ admin-new-ui:
   image:
     repository: "coredgeio/admin_react_frontend"
     pullPolicy: IfNotPresent
-    tag: "v18042023140831"
+    tag: "airtel_v1"
   replicas: "1"
   httpPort: 80
   #resources: |
