@@ -44,11 +44,7 @@ frontend:
     - name: frontendnginx
       mountPath: /etc/nginx/conf.d
 
-  ingress:
-    enabled: true
-    hostName: frontend-cd.coredge.io
-    secretName: coredge
-    ingressClassName: nginx
+
 
 react-frontend:
   labels:
@@ -114,6 +110,6 @@ react-frontend:
   ingress:
     ingressClassName: nginx
     enabled: true
-    hostName: reactfrontend-cd.coredge.io
+    hostName: service-cd.coredge.io
     context: 
     secretName: coredge

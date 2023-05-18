@@ -605,7 +605,7 @@ socketio:
         https://admin-cd.coredge.io
         https://serviceadmin-cd.coredge.io https://serviceapi-cd.coredge.io
         https://serviceconsole-cd.coredge.io
-        https://auth.coredge.io https://service-cd.coredge.io      
+        https://auth-cd.coredge.io  https://service-cd.coredge.io      
 
 
 pgadmin:
