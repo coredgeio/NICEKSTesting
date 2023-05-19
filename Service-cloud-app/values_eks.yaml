@@ -5,7 +5,7 @@ postgres:
 
   image:
     repository: "coredgeio/postgres"
-    tag: "middle_19-04-23"
+    tag: "middle_raw"
   replicas: "1"
   httpPort: 5432
 
@@ -73,7 +73,7 @@ admin-api:
 
   env: |
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole-cd.coredge.io"
+      value: "https://serviceconsole.coredge.io"
     - name: SMTP_SERVICE_URL
       value: "servicecloud-smtp"
     - name: SMTP_SERVICE_PORT
@@ -114,9 +114,9 @@ admin-api:
           name: sms
           key: SMS_SERVICE_USERPIN
     - name: NO_PROXY
-      value: auth-cd.coredge.io
+      value: auth.coredge.io
     - name: OIDC_BASE_URL
-      value: https://auth-cd.coredge.io
+      value: https://auth.coredge.io
     - name: OIDC_CLIENT_ID
       value: adminapis
     - name: OIDC_CLIENT_SECRET
@@ -142,7 +142,7 @@ admin-api:
     - name: TOKEN_EXPIRY_TIME
       value: '1200'
     - name: VAULT_ADDR
-      value: https://vault-cd.coredge.io
+      value: https://vault.coredge.io
     - name: VAULT_ENABLED
       value: 'true'
     - name: VAULT_KV_PATH
@@ -173,10 +173,10 @@ admin-api:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth-cd.coredge.io" 
+        - "auth.coredge.io" 
       - ip: "10.2.3.242"
         hostnames:
-          - vault-cd.coredge.io       
+          - vault.coredge.io       
 
 
 admin-celery:
@@ -209,7 +209,7 @@ admin-celery:
 
   env: |
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole-cd.coredge.io"
+      value: "https://serviceconsole.coredge.io"
     - name: SMTP_SERVICE_URL
       value: "servicecloud-smtp"
     - name: SMTP_SERVICE_PORT
@@ -250,9 +250,9 @@ admin-celery:
           name: sms
           key: SMS_SERVICE_USERPIN
     - name: NO_PROXY
-      value: auth-cd.coredge.io
+      value: auth.coredge.io
     - name: OIDC_BASE_URL
-      value: https://auth-cd.coredge.io
+      value: https://auth.coredge.io
     - name: OIDC_CLIENT_ID
       value: adminapis
     - name: OIDC_CLIENT_SECRET
@@ -278,7 +278,7 @@ admin-celery:
     - name: TOKEN_EXPIRY_TIME
       value: '1200'
     - name: VAULT_ADDR
-      value: https://vault-cd.coredge.io
+      value: https://vault.coredge.io
     - name: VAULT_ENABLED
       value: 'true'
     - name: VAULT_KV_PATH
@@ -299,11 +299,11 @@ admin-celery:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth-cd.coredge.io" 
+        - "auth.coredge.io" 
 
       - ip: "10.2.3.242"
         hostnames:
-          - vault-cd.coredge.io            
+          - vault.coredge.io            
 
 
 api:
@@ -339,7 +339,7 @@ api:
     - name: DB_HOST
       value: "postgres-h"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole-cd.coredge.io"
+      value: "https://serviceconsole.coredge.io"
     - name: POSTGRES_DB
       value: middleware_production_db
     - name: POSTGRES_PASSWORD
@@ -347,14 +347,14 @@ api:
     - name: POSTGRES_USER
       value: middleware_user
     - name: NO_PROXY
-      value: auth-cd.coredge.io
+      value: auth.coredge.io
     - name: OIDC_CLIENT_ID
       value: apis
     - name: OIDC_CLIENT_SECRET
       value: envHo5IU3YirccTbkbNkR8WYrLqycqpK
     - name: OIDC_DISCOVERY_URI
       value: >-
-        https://auth-cd.coredge.io/auth/realms/cloud/.well-known/openid-configuration
+        https://auth.coredge.io/auth/realms/cloud/.well-known/openid-configuration
     - name: OIDC_OPENID_REALM
       value: cloud
     - name: OIDC_ENABLED
@@ -391,13 +391,13 @@ api:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth-cd.coredge.io"
+        - "auth.coredge.io"
       - ip: 10.247.252.97
         hostnames:
           - cloud.gov.in
       - ip: "10.2.3.242"
         hostnames:
-          - vault-cd.coredge.io             
+          - vault.coredge.io             
 
 celery:
   labels:
@@ -442,7 +442,7 @@ celery:
     - name: DB_HOST
       value: "postgres-h"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole-cd.coredge.io"
+      value: "https://serviceconsole.coredge.io"
     - name: POSTGRES_DB
       value: middleware_production_db
     - name: POSTGRES_PASSWORD
@@ -450,14 +450,14 @@ celery:
     - name: POSTGRES_USER
       value: middleware_user
     - name: NO_PROXY
-      value: auth-cd.coredge.io
+      value: auth.coredge.io
     - name: OIDC_CLIENT_ID
       value: apis
     - name: OIDC_CLIENT_SECRET
       value: envHo5IU3YirccTbkbNkR8WYrLqycqpK
     - name: OIDC_DISCOVERY_URI
       value: >-
-        https://auth-cd.coredge.io/auth/realms/cloud/.well-known/openid-configuration
+        https://auth.coredge.io/auth/realms/cloud/.well-known/openid-configuration
     - name: OIDC_OPENID_REALM
       value: cloud
     - name: OIDC_ENABLED
@@ -519,7 +519,7 @@ apirevproxy:
 
   ingress:
     enabled: true
-    hostName: serviceapi-cd.coredge.io
+    hostName: serviceapi.coredge.io
     context: 
     secretName: coredge
     ingressClassName: nginx
@@ -552,7 +552,7 @@ console:
   
   ingress:
     enabled: true
-    hostName: serviceconsole-cd.coredge.io
+    hostName: serviceconsole.coredge.io
     context: 
     secretName: coredge
     ingressClassName: nginx
@@ -594,7 +594,7 @@ socketio:
 
   ingress:
     enabled: true
-    hostName: servicesocketio-cd.coredge.io
+    hostName: servicesocketio.coredge.io
     context:
     secretName: coredge
     ingressClassName: nginx
@@ -602,10 +602,10 @@ socketio:
   env: |
     - name: ALLOWED_ORIGIN
       value: >-
-        https://admin-cd.coredge.io
-        https://serviceadmin-cd.coredge.io https://serviceapi-cd.coredge.io
-        https://serviceconsole-cd.coredge.io
-        https://auth-cd.coredge.io  https://service-cd.coredge.io      
+        https://admin.coredge.io
+        https://serviceadmin.coredge.io https://serviceapi.coredge.io
+        https://serviceconsole.coredge.io
+        https://auth.coredge.io  https://service.coredge.io      
 
 
 pgadmin:
@@ -632,7 +632,7 @@ pgadmin:
 
   ingress:
     enabled: true
-    hostName: servicepgadmin-cd.coredge.io
+    hostName: servicepgadmin.coredge.io
     context: 
     secretName: coredge
     ingressClassName: nginx

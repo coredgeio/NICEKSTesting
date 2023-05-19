@@ -17,11 +17,11 @@ frontend:
 
   env: |
     - name: VUE_APP_SOCKET_IO
-      value: "https://servicesocketio-cd.coredge.io"
+      value: "https://servicesocketio.coredge.io"
     - name: VUE_APP_API_URL
-      value: "https://serviceapi-cd.coredge.io"
+      value: "https://serviceapi.coredge.io"
     - name: VUE_APP_OIDC_AUTH_URL
-      value: https://auth-cd.coredge.io/auth
+      value: https://auth.coredge.io/auth
     - name: VUE_APP_OIDC_REALM
       value: cloud
     - name: VUE_APP_OIDC_ENABLED
@@ -33,7 +33,7 @@ frontend:
     - name: VUE_APP_NEW_UI_ENABLED
       value: 'true'
     - name: VUE_APP_NEW_UI_URL
-      value: https:\/\/service-cd.coredge.io\/      
+      value: https:\/\/service.coredge.io\/      
 
   volumes: |
     - name: frontendnginx
@@ -65,11 +65,11 @@ react-frontend:
 
   env: |
     - name: APP_SOCKET_IO
-      value: https://servicesocketio-cd.coredge.io
+      value: https://servicesocketio.coredge.io
     - name: APP_API_URL
-      value: https://serviceapi-cd.coredge.io
+      value: https://serviceapi.coredge.io
     - name: APP_OIDC_AUTH_URL
-      value: https://auth-cd.coredge.io/auth
+      value: https://auth.coredge.io/auth
     - name: APP_OIDC_REALM
       value: cloud
     - name: APP_OIDC_ENABLED
@@ -85,7 +85,7 @@ react-frontend:
     - name: REACT_APP_OIDC_ENABLED
       value: 'true'
     - name: REACT_APP_OLD_PORTAL_LINK
-      value:  https:\/\/service-cd.coredge.io\/ui\/v1\/
+      value:  https:\/\/service.coredge.io\/ui\/v1\/
     - name: REACT_APP_ROUTER_BASE_NAME
       value: \/
     - name: REACT_APP_ROUTE_PROXY
@@ -95,7 +95,7 @@ react-frontend:
     - name: REACT_APP_ADD_NEW_SSL_ACTIVE
       value: 'true'
     - name: REACT_APP_K8S_DASHBOARD_URL
-      value: https:\/\/nks-cd.coredge.io   
+      value: https:\/\/nks.coredge.io   
 
 
   volumes: |
@@ -110,6 +110,6 @@ react-frontend:
   ingress:
     ingressClassName: nginx
     enabled: true
-    hostName: service-cd.coredge.io
+    hostName: service.coredge.io
     context: 
     secretName: coredge

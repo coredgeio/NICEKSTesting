@@ -50,7 +50,7 @@ ingress:
   rules:
     -
       # Ingress host
-      host: 'auth-cd.coredge.io'
+      host: 'auth.coredge.io'
       # Paths for the host
       paths:
         - path: /
@@ -58,7 +58,7 @@ ingress:
   # TLS configuration
   tls:
     - hosts:
-        - 'auth-cd.coredge.io'
+        - 'auth.coredge.io'
       secretName: "coredge"
 
   # ingress for console only (/auth/admin)
@@ -73,7 +73,7 @@ ingress:
     rules:
       -
         # Ingress host
-        host: 'authadmin-cd.coredge.io'
+        host: 'authadmin.coredge.io'
         # Paths for the host
         paths:
           - path: /auth
@@ -81,7 +81,7 @@ ingress:
     # Console TLS configuration
     tls:
      - hosts:
-         - authadmin-cd.coredge.io
+         - authadmin.coredge.io
        secretName: "coredge"
 
 ## Network policy configuration      

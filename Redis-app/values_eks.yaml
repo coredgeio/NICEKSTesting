@@ -34,7 +34,7 @@ redisadmin:
 
   ingress:
     enabled: true
-    hostName: redisadmin-cd.coredge.io
+    hostName: redisadmin.coredge.io
     context: redis
     secretName: coredge
     ingressClassName: nginx
