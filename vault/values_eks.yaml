@@ -389,7 +389,7 @@ server:
     # configure the ingress to point to the Vault active service.
     activeService: true
     hosts:
-      - host: vault-cd.coredge.io
+      - host: vault.coredge.io
         paths: []
     ## Extra paths to prepend to the host configuration. This is useful when working with annotation based services.
     extraPaths: []
@@ -402,7 +402,7 @@ server:
     tls:
      - secretName: coredge
        hosts:
-         - vault-cd.coredge.io
+         - vault.coredge.io
 
   # OpenShift only - create a route to expose the service
   # By default the created route will be of type passthrough
