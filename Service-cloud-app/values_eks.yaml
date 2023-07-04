@@ -312,9 +312,9 @@ api:
 
   # Container Configs
   image:
-    repository: "coredgeio/middleware"
+    repository: "coredgeio/mcp-platform"
     pullPolicy: IfNotPresent
-    tag: "v01052023200740"
+    tag: "1.0"
   replicas: "1"
   httpPort: 5000
   #resources: |
