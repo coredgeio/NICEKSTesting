@@ -56,9 +56,9 @@ osaas-api:
 
   # Container Configs
   image:
-    repository: "coredgeio/object-storage-middleware"
+    repository: "coredgeio//mcp-ossas-api"
     pullPolicy: IfNotPresent
-    tag: "v130420231530"
+    tag: "1.0"
   replicas: "1"
   httpPort: 5000
   #resources: |
@@ -102,9 +102,9 @@ osaas-celery:
 
   # Container Configs
   image:
-    repository: "coredgeio/object-storage-middleware"
+    repository: "coredgeio/mcp-ossas-api"
     pullPolicy: IfNotPresent
-    tag: "v130420231530"
+    tag: "1.0"
   replicas: "1"
   httpPort: 5000
   #resources: |
