@@ -30,10 +30,10 @@ global:
   storageClass: ""
   postgresql:
     username: ""
-    password: ""
+    password: "dHUwKkWmqT"
     database: ""
     repmgrUsername: ""
-    repmgrPassword: ""
+    repmgrPassword: "1uyAjKx9hv"
     repmgrDatabase: ""
     existingSecret: ""
   ldap:
