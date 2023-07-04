@@ -2,7 +2,7 @@
 
 global:
   isDedicatedNamespace: false
-  certname: coredge
+  certname: cloudsandbox
   #Example coredge, preprod-certs
   
   # enabled is the master enabled switch. Setting this to true or false
@@ -389,7 +389,7 @@ server:
     # configure the ingress to point to the Vault active service.
     activeService: true
     hosts:
-      - host: vault.coredge.io
+      - host: vault.cloudsandbox.in
         paths: []
     ## Extra paths to prepend to the host configuration. This is useful when working with annotation based services.
     extraPaths: []
@@ -400,9 +400,9 @@ server:
     #       port:
     #         number: use-annotation
     tls:
-     - secretName: coredge
+     - secretName: cloudsandbox
        hosts:
-         - vault.coredge.io
+         - vault.cloudsandbox.in
 
   # OpenShift only - create a route to expose the service
   # By default the created route will be of type passthrough

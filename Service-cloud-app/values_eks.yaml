@@ -73,7 +73,7 @@ admin-api:
 
   env: |
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
     - name: SMTP_SERVICE_URL
       value: "servicecloud-smtp"
     - name: SMTP_SERVICE_PORT
@@ -114,9 +114,9 @@ admin-api:
           name: sms
           key: SMS_SERVICE_USERPIN
     - name: NO_PROXY
-      value: auth.coredge.io
+      value: auth.cloudsandbox.in
     - name: OIDC_BASE_URL
-      value: https://auth.coredge.io
+      value: https://auth.cloudsandbox.in
     - name: OIDC_CLIENT_ID
       value: adminapis
     - name: OIDC_CLIENT_SECRET
@@ -142,7 +142,7 @@ admin-api:
     - name: TOKEN_EXPIRY_TIME
       value: '1200'
     - name: VAULT_ADDR
-      value: https://vault.coredge.io
+      value: https://vault.cloudsandbox.in
     - name: VAULT_ENABLED
       value: 'true'
     - name: VAULT_KV_PATH
@@ -173,10 +173,10 @@ admin-api:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth.coredge.io" 
+        - "auth.cloudsandbox.in" 
       - ip: "10.2.3.242"
         hostnames:
-          - vault.coredge.io       
+          - vault.cloudsandbox.in       
 
 
 admin-celery:
@@ -209,7 +209,7 @@ admin-celery:
 
   env: |
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
     - name: SMTP_SERVICE_URL
       value: "servicecloud-smtp"
     - name: SMTP_SERVICE_PORT
@@ -250,9 +250,9 @@ admin-celery:
           name: sms
           key: SMS_SERVICE_USERPIN
     - name: NO_PROXY
-      value: auth.coredge.io
+      value: auth.cloudsandbox.in
     - name: OIDC_BASE_URL
-      value: https://auth.coredge.io
+      value: https://auth.cloudsandbox.in
     - name: OIDC_CLIENT_ID
       value: adminapis
     - name: OIDC_CLIENT_SECRET
@@ -278,7 +278,7 @@ admin-celery:
     - name: TOKEN_EXPIRY_TIME
       value: '1200'
     - name: VAULT_ADDR
-      value: https://vault.coredge.io
+      value: https://vault.cloudsandbox.in
     - name: VAULT_ENABLED
       value: 'true'
     - name: VAULT_KV_PATH
@@ -299,11 +299,11 @@ admin-celery:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth.coredge.io" 
+        - "auth.cloudsandbox.in" 
 
       - ip: "10.2.3.242"
         hostnames:
-          - vault.coredge.io            
+          - vault.cloudsandbox.in            
 
 
 api:
@@ -339,7 +339,7 @@ api:
     - name: DB_HOST
       value: "postgres-h"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
     - name: POSTGRES_DB
       value: middleware_production_db
     - name: POSTGRES_PASSWORD
@@ -347,14 +347,14 @@ api:
     - name: POSTGRES_USER
       value: middleware_user
     - name: NO_PROXY
-      value: auth.coredge.io
+      value: auth.cloudsandbox.in
     - name: OIDC_CLIENT_ID
       value: apis
     - name: OIDC_CLIENT_SECRET
       value: envHo5IU3YirccTbkbNkR8WYrLqycqpK
     - name: OIDC_DISCOVERY_URI
       value: >-
-        https://auth.coredge.io/auth/realms/cloud/.well-known/openid-configuration
+        https://auth.cloudsandbox.in/auth/realms/cloud/.well-known/openid-configuration
     - name: OIDC_OPENID_REALM
       value: cloud
     - name: OIDC_ENABLED
@@ -391,13 +391,13 @@ api:
   hostAliases:
       - ip: "10.2.3.242"
         hostnames:
-        - "auth.coredge.io"
+        - "auth.cloudsandbox.in"
       - ip: 10.247.252.97
         hostnames:
           - cloud.gov.in
       - ip: "10.2.3.242"
         hostnames:
-          - vault.coredge.io             
+          - vault.cloudsandbox.in             
 
 celery:
   labels:
@@ -442,7 +442,7 @@ celery:
     - name: DB_HOST
       value: "postgres-h"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
     - name: POSTGRES_DB
       value: middleware_production_db
     - name: POSTGRES_PASSWORD
@@ -450,14 +450,14 @@ celery:
     - name: POSTGRES_USER
       value: middleware_user
     - name: NO_PROXY
-      value: auth.coredge.io
+      value: auth.cloudsandbox.in
     - name: OIDC_CLIENT_ID
       value: apis
     - name: OIDC_CLIENT_SECRET
       value: envHo5IU3YirccTbkbNkR8WYrLqycqpK
     - name: OIDC_DISCOVERY_URI
       value: >-
-        https://auth.coredge.io/auth/realms/cloud/.well-known/openid-configuration
+        https://auth.cloudsandbox.in/auth/realms/cloud/.well-known/openid-configuration
     - name: OIDC_OPENID_REALM
       value: cloud
     - name: OIDC_ENABLED
@@ -519,9 +519,9 @@ apirevproxy:
 
   ingress:
     enabled: true
-    hostName: serviceapi.coredge.io
+    hostName: serviceapi.cloudsandbox.in
     context: 
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx
 
 console:
@@ -552,9 +552,9 @@ console:
   
   ingress:
     enabled: true
-    hostName: serviceconsole.coredge.io
+    hostName: serviceconsole.cloudsandbox.in
     context: 
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx
 
 socketio:
@@ -594,18 +594,18 @@ socketio:
 
   ingress:
     enabled: true
-    hostName: servicesocketio.coredge.io
+    hostName: servicesocketio.cloudsandbox.in
     context:
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx
 
   env: |
     - name: ALLOWED_ORIGIN
       value: >-
-        https://admin.coredge.io
-        https://serviceadmin.coredge.io https://serviceapi.coredge.io
-        https://serviceconsole.coredge.io
-        https://auth.coredge.io  https://service.coredge.io      
+        https://admin.cloudsandbox.in
+        https://serviceadmin.cloudsandbox.in https://serviceapi.cloudsandbox.in
+        https://serviceconsole.cloudsandbox.in
+        https://auth.cloudsandbox.in  https://service.cloudsandbox.in      
 
 
 pgadmin:
@@ -632,9 +632,9 @@ pgadmin:
 
   ingress:
     enabled: true
-    hostName: servicepgadmin.coredge.io
+    hostName: servicepgadmin.cloudsandbox.in
     context: 
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx
 
 smtp:
