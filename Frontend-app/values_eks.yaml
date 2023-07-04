@@ -81,17 +81,17 @@ react-frontend:
     - name: REACT_APP_LINK_DOCS
       value: 
     - name: REACT_APP_K8S_DASHBOARD_ENABLED
-      value: 'true'
+      value: 'false'
     - name: REACT_APP_OIDC_ENABLED
       value: 'true'
     - name: REACT_APP_OLD_PORTAL_LINK
-      value:  https:\/\/service.cloudsandbox.in\/ui\/v1\/
+      value: 
     - name: REACT_APP_ROUTER_BASE_NAME
       value: \/
     - name: REACT_APP_ROUTE_PROXY
       value: 'false'    
     - name: REACT_APP_IS_NKS_ENABLED
-      value: 'true'    
+      value: 'false'    
     - name: REACT_APP_ADD_NEW_SSL_ACTIVE
       value: 'true'
     - name: REACT_APP_K8S_DASHBOARD_URL
