@@ -52,9 +52,9 @@ react-frontend:
 
   # Container Configs
   image:
-    repository: "coredgeio/react_frontend"
+    repository: "coredgeio/mcp-frontend"
     pullPolicy: IfNotPresent
-    tag: "airtel_v1"
+    tag: "1.1"
   replicas: "1"
   httpPort: 80
   #resources: |
