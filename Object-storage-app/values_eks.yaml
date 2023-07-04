@@ -56,7 +56,7 @@ osaas-api:
 
   # Container Configs
   image:
-    repository: "coredgeio//mcp-ossas-api"
+    repository: "coredgeio/mcp-ossas-api"
     pullPolicy: IfNotPresent
     tag: "1.0"
   replicas: "1"
