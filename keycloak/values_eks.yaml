@@ -1,5 +1,5 @@
 global:
-  certname: coredge
+  certname: cloudsandbox
   #Example coredge, preprod-certs
 
 replicas: 3
@@ -50,7 +50,7 @@ ingress:
   rules:
     -
       # Ingress host
-      host: 'auth.coredge.io'
+      host: 'auth.cloudsandbox.in'
       # Paths for the host
       paths:
         - path: /
@@ -58,8 +58,8 @@ ingress:
   # TLS configuration
   tls:
     - hosts:
-        - 'auth.coredge.io'
-      secretName: "coredge"
+        - 'auth.cloudsandbox.in'
+      secretName: "cloudsandbox"
 
   # ingress for console only (/auth/admin)
   console:
@@ -73,7 +73,7 @@ ingress:
     rules:
       -
         # Ingress host
-        host: 'authadmin.coredge.io'
+        host: 'authadmin.cloudsandbox.in'
         # Paths for the host
         paths:
           - path: /auth
@@ -81,7 +81,7 @@ ingress:
     # Console TLS configuration
     tls:
      - hosts:
-         - authadmin.coredge.io
-       secretName: "coredge"
+         - authadmin.cloudsandbox.in
+       secretName: "cloudsandbox"
 
 ## Network policy configuration      

@@ -15,11 +15,11 @@ admin:
   tracing-enabled: false
   env: |
     - name: VUE_APP_SOCKET_IO
-      value: https:\/\/servicesocketio.coredge.io
+      value: https:\/\/servicesocketio.cloudsandbox.in
     - name: VUE_APP_API_URL
-      value: https:\/\/serviceapi.coredge.io
+      value: https:\/\/serviceapi.cloudsandbox.in
     - name: VUE_APP_OIDC_AUTH_URL
-      value: https:\/\/auth.coredge.io\/auth
+      value: https:\/\/auth.cloudsandbox.in\/auth
     - name: VUE_APP_OIDC_REALM
       value: cloud
     - name: VUE_APP_OIDC_ENABLED
@@ -37,9 +37,9 @@ admin:
 
   ingress:
     enabled: true
-    hostName: admin.coredge.io
+    hostName: admin.cloudsandbox.in
     context:
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx
 
 admin-new-ui:
@@ -61,11 +61,11 @@ admin-new-ui:
 
   env: |
     - name: REACT_APP_API_URL
-      value: https://serviceapi.coredge.io
+      value: https://serviceapi.cloudsandbox.in
     - name: REACT_APP_SOCKET_IO
-      value: https://servicesocketio.coredge.io 
+      value: https://servicesocketio.cloudsandbox.in
     - name: REACT_APP_OIDC_AUTH_URL
-      value: https://auth.coredge.io/auth
+      value: https://auth.cloudsandbox.in/auth
     - name: REACT_APP_OIDC_REALM
       value: cloud
     - name: REACT_APP_OIDC_CLIENT_ID
@@ -86,7 +86,7 @@ admin-new-ui:
 
   ingress:
     enabled: true
-    hostName: serviceadmin.coredge.io
+    hostName: serviceadmin.cloudsandbox.in
     context:
-    secretName: coredge
+    secretName: cloudsandbox
     ingressClassName: nginx

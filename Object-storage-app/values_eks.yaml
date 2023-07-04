@@ -75,7 +75,7 @@ osaas-api:
     - name: DB_HOST
       value: "postgres-osaas"
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
 
   volumes: |
     - name: osaas-swagger-ui
@@ -117,7 +117,7 @@ osaas-celery:
     - name: AUTO_VERIFY_BACKUP
       value: 'false'
     - name: CONSOLE_PROXY
-      value: "https://serviceconsole.coredge.io"
+      value: "https://serviceconsole.cloudsandbox.in"
     - name: DB_HOST
       value: postgres-osaas
     - name: DB_PORT
